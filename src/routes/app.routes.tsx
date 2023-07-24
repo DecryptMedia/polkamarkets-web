@@ -55,7 +55,7 @@ const AppRoutes = () => {
     fetchUserCountry();
   }, [restrictedCountries]);
 
-  if (!isAllowedCountry)
+  if (!isAllowedCountry || window.location.pathname === '/blocked')
     return (
       <Suspense fallback={null}>
         <RestrictedCountry />
