@@ -163,6 +163,16 @@ const networks: {
     decimals: 18,
     explorerURL: 'https://mumbai.polygonscan.com',
     rpcUrls: ['https://rpc-mumbai.maticvigil.com']
+  },
+  '0x66eee': {
+    id: '421614',
+    name: 'Arbitrum Sepolia',
+    key: 'arbitrum-sepolia',
+    colorAccent: 'blue',
+    currency: ETH,
+    decimals: 18,
+    explorerURL: 'https://sepolia.arbiscan.io',
+    rpcUrls: ['https://sepolia-rollup.arbitrum.io/rpc']
   }
 });
 

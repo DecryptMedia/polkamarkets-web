@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "engines": {
-    "node": ">=16.18.1 <=20.8.1"
+    "node": ">=16.18.1 <=20.15.0"
   },
   "dependencies": {
     "@craco/craco": "^6.1.1",
@@ -86,9 +86,9 @@
     "zustand": "^4.3.6"
   },
   "scripts": {
-    "start": "craco start NODE_OPTIONS=--openssl-legacy-provider",
-    "build": "craco build && yarn sentry:sourcemaps",
-    "server": "node server/index.js",
+    "start": "NODE_OPTIONS=\"--openssl-legacy-provider --max-old-space-size=4096\" craco start",
+    "build": "NODE_OPTIONS=\"--openssl-legacy-provider --max-old-space-size=4096\" craco build",
+    "server": "node --openssl-legacy-provider server/index.js",
     "test": "craco test",
     "eject": "react-scripts eject",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx src --color",
@@ -168,5 +168,6 @@
     "webpack": "4.44.2",
     "styled-components": "^5",
     "html-to-text": "^7.1.1"
-  }
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }
